@@ -6,9 +6,9 @@ const NavItem = ({ text, link }) => {
   return (
     <Link
       href={link}
-      className="transition-all duration-300 cursor-pointer hover:text-primary"
+      className="text-black transition-all duration-300 cursor-pointer hover:text-primary"
     >
-      <TitlleOne text={text} variant={'hitam'} />
+      <TitlleOne text={text} />
     </Link>
   );
 };
