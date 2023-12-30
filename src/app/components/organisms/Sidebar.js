@@ -19,7 +19,9 @@ const Sidebar = () => {
 
   return (
     <nav className="flex flex-col min-h-screen p-1 bg-black">
-      <div className="h-20 p-2 text-white">Logo</div>
+      <div>
+        <img src='images/dafema-logo.png'></img>
+      </div>
       <SideItem text={'Dashboard'} link={'#'} />
       <SideItem text={'Laporan Pemasukan '} link={'#'} />
       <Dropdown options={options} onSelect={handleSelect} />
