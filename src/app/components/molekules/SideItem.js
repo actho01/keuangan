@@ -4,8 +4,11 @@ import Link from 'next/link';
 
 const SideItem = ({ text, link }) => {
   return (
-    <Link href={link} className="w-full p-2 rounded hover:bg-white">
-      <TitlleOne text={text} variant={'putih'} />
+    <Link
+      href={link}
+      className="w-full p-2 text-white transition-all duration-300 rounded hover:bg-white hover:text-primary"
+    >
+      <TitlleOne text={text} />
     </Link>
   );
 };
