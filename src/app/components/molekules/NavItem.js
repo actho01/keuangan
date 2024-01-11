@@ -1,14 +1,15 @@
 import React from 'react';
-import TitlleOne from '../atoms/TitlleOne';
+
 import Link from 'next/link';
+import TitleTwo from '../atoms/TitleTwo';
 
 const NavItem = ({ text, link }) => {
   return (
     <Link
       href={link}
-      className="text-black transition-all duration-300 cursor-pointer hover:text-primary"
+      className="text-xl text-white transition-all duration-300 cursor-pointer hover:underline"
     >
-      <TitlleOne text={text} />
+      <TitleTwo text={text} />
     </Link>
   );
 };

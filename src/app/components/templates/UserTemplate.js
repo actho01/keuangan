@@ -5,13 +5,13 @@ import Sidebar from '../organisms/Sidebar';
 
 const UserTemplate = ({ children }) => {
   return (
-    <main className="flex w-full min-h-screen">
-      <div className="w-1/5">
+    <main className="flex w-full min-h-screen bg-white">
+      <div className=" w-1/8">
         <Sidebar />
       </div>
-      <div className="w-5/6">
+      <div className="w-full ">
         <Navbar />
-        <section className="p-5">{children}</section>
+        <div>{children}</div>
       </div>
     </main>
   );
