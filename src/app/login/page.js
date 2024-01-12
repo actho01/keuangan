@@ -59,7 +59,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             type={'password'}
           />
-          <Button title={'Sign In'} />
+          <Button title={'Sign In'} variant={'biru'} />
         </form>
       </div>
     </div>

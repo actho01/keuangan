@@ -15,9 +15,13 @@ module.exports = {
       },
       colors: {
         'biru-btn': '#0077B5',
+        dark: '#172B4D',
+        ungu: '#5E72E4',
         primary: '#0475b4',
+        light: '#F6F9FC',
         secondary: '#eb4d40',
         third: '#e4d42c',
+        abu: '#8898AA',
       },
     },
   },
