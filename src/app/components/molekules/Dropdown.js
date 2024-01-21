@@ -3,7 +3,7 @@ import TitlleOne from '../atoms/TitlleOne';
 
 const Dropdown = ({ options, children }) => {
   const handleSelect = (value) => {
-    window.location.href = `/${value}`;
+    window.location.href = `http://localhost:3000/${value}`;
   };
 
   return (

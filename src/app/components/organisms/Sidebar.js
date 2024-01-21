@@ -14,8 +14,11 @@ const Sidebar = () => {
 
   const options = [
     { value: 'laporan', label: 'Laporan Pengeluaran' },
-    { value: 'pengeluaran-operasional', label: 'Pengeluaran Operasional' },
-    { value: 'pengeluaran-harian', label: 'Pengeluaran Harian' },
+    {
+      value: '/laporan/pengeluaran/operasional',
+      label: 'Pengeluaran Operasional',
+    },
+    { value: '/laporan/pengeluaran/harian', label: 'Pengeluaran Harian' },
   ];
 
   const handleSelect = (value) => {

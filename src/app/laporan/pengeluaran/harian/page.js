@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { FaArrowDown, FaArrowUp, FaChevronRight } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 
-const LaporanPemasukan = () => {
+const LaporanPengeluaranHarian = () => {
   const data = [
     {
       name: 'Jan',
@@ -100,7 +100,7 @@ const LaporanPemasukan = () => {
     setCurrentPage(pageNumber);
   };
   return (
-    <UserTemplate page={'Laporan Pemasukan'}>
+    <UserTemplate page={'Pengeluaran Harian'}>
       <div className="p-4">
         <section className="flex flex-col items-end space-y-3">
           <fieldset className="flex w-1/6 space-x-4">
@@ -191,4 +191,4 @@ const LaporanPemasukan = () => {
   );
 };
 
-export default LaporanPemasukan;
+export default LaporanPengeluaranHarian;

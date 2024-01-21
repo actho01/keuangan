@@ -37,7 +37,7 @@ export default function Home() {
   }));
 
   return (
-    <UserTemplate>
+    <UserTemplate page={'Dashboard'}>
       <section className="flex justify-between w-full px-5 mt-5">
         <div className="w-3/5 rounded shadow-md bg-dark">
           <div className="p-4 px-14">
