@@ -3,7 +3,7 @@ version: '3.7'
 services:
   keuangan-fe:
     build: .
-    image: 'atcho/keuangan-fe'
+    image: 'keuangan-fe'
     container_name: keuangan-fe
     restart: always
     env_file:
