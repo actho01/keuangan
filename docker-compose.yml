@@ -1,0 +1,18 @@
+version: '1.0'
+
+services:
+  keuangan-fe:
+    build: .
+    image: 'keuangan-fe'
+    container_name: keuangan-fe
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - '3100:3000'
+    networks:
+      - keuangan
+
+networks:
+  keuangan:
+    external: true
