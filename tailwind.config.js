@@ -22,6 +22,7 @@ module.exports = {
         secondary: '#eb4d40',
         third: '#e4d42c',
         abu: '#8898AA',
+        hijau: '#37A005',
       },
     },
   },

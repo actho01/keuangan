@@ -33,10 +33,10 @@ const Sidebar = () => {
             alt="dafema"
           />
         </div>
-        <SideItem text={'Dashboard'} link={'#'}>
+        <SideItem text={'Dashboard'} link={'/'}>
           <RiComputerLine />
         </SideItem>
-        <SideItem text={'Laporan Pemasukan '} link={'#'}>
+        <SideItem text={'Laporan Pemasukan '} link={'/laporan/pemasukan'}>
           <TbReportAnalytics />
         </SideItem>
         <Dropdown options={options} onSelect={handleSelect}>
