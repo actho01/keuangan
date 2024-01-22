@@ -8,6 +8,7 @@ import { RiComputerLine } from 'react-icons/ri';
 import { TbReportAnalytics } from 'react-icons/tb';
 import { TbReportMoney } from 'react-icons/tb';
 import Button from '../atoms/Button';
+import Cookies from 'js-cookie';
 
 const Sidebar = () => {
   const [selectedOption, setSelectedOption] = useState('Laporan Pengeluaran');
@@ -23,6 +24,13 @@ const Sidebar = () => {
 
   const handleSelect = (value) => {
     setSelectedOption(value);
+  };
+
+  const handleLogout = () => {
+    Cookies.remove('token');
+    Cookies.remove('User');
+
+    window.location.href = '/login';
   };
 
   return (
@@ -47,7 +55,11 @@ const Sidebar = () => {
         </Dropdown>
       </div>
       <div className="flex justify-center p-4">
-        <Button title={'Log Out'} variant={'putih'} />
+        <Button
+          title={'Log Out'}
+          variant={'putih'}
+          onClick={() => handleLogout()}
+        />
       </div>
     </nav>
   );

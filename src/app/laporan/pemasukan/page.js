@@ -14,6 +14,8 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { CircularProgress } from '@mui/material';
 
+import EditModal from '@/app/components/molekules/EditModal';
+
 const LaporanPemasukan = () => {
   const [pemasukan, setPemasukan] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
@@ -24,11 +26,13 @@ const LaporanPemasukan = () => {
   const [alertMessage, setAlertMessage] = useState('');
   const [loading, setLoading] = useState(true);
 
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   const handleAlertClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
     }
-
     setShowAlert(false);
     setAlertMessage('');
   };
@@ -39,6 +43,11 @@ const LaporanPemasukan = () => {
 
   const toggleEdit = () => {
     setIsEdit(!isEdit);
+  };
+
+  const handleEdit = (item) => {
+    setIsEditModalOpen(!isEditModalOpen);
+    setSelectedItem(item);
   };
 
   const fetchPemasukan = async () => {
@@ -85,6 +94,10 @@ const LaporanPemasukan = () => {
     } catch (error) {
       console.error('Error deleting data:', error);
     }
+  };
+
+  const handleEditLaporan = async (e) => {
+    e.preventDefault();
   };
 
   const itemsPerPage = 10;
@@ -193,7 +206,10 @@ const LaporanPemasukan = () => {
                         )}
                         {isEdit && (
                           <div className="p-2 rounded">
-                            <AiOutlineEdit className="text-lg cursor-pointer text-third text-opacity-80 hover:text-opacity-100" />
+                            <AiOutlineEdit
+                              className="text-lg cursor-pointer text-third text-opacity-80 hover:text-opacity-100"
+                              onClick={() => handleEdit(item)}
+                            />
                           </div>
                         )}
                       </td>
@@ -202,6 +218,11 @@ const LaporanPemasukan = () => {
                 ))}
               </tbody>
             </table>
+            <EditModal
+              isOpen={isEditModalOpen}
+              onClose={() => setIsEditModalOpen(false)}
+              selectedItem={selectedItem}
+            />
           </section>
         )}
 

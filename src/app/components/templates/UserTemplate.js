@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../organisms/Navbar';
 import Footer from '../organisms/Footer';
 import Sidebar from '../organisms/Sidebar';

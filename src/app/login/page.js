@@ -20,17 +20,17 @@ const Login = () => {
 
     try {
       const res = await LoginApi({ email, password });
+      console.log('data', res);
 
       if (res.status) {
-        console.log('sini');
         Cookies.set('token', res.data.token);
+        Cookies.set('User', JSON.stringify(res.data.user));
         setIsLoading(true);
         setTimeout(() => {
           setIsLoading(false);
           window.location.href = '/';
         }, 2000);
       } else {
-        console.log('sini2');
         setShowAlert(true);
         setTimeout(() => {
           setShowAlert(false);
