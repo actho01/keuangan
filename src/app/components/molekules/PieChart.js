@@ -5,7 +5,7 @@ const COLORS = ['#00C49F', '#E7483F'];
 
 const PieCharts = ({ data }) => {
   return (
-    <PieChart width={400} height={400}>
+    <PieChart id="#" width={400} height={400}>
       <Pie
         dataKey="value"
         data={data}

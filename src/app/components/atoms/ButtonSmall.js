@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ButtonSmall = ({ title, variant }) => {
+const ButtonSmall = ({ title, variant, onClick }) => {
   let color;
   if (variant === 'biru') {
     color = 'text-white bg-biru-btn border border-black';
@@ -15,7 +15,10 @@ const ButtonSmall = ({ title, variant }) => {
     color = 'text-white bg-red-500 border border-black';
   }
   return (
-    <button className={` w-full p-1 text-xs rounded-lg uppercase ${color}`}>
+    <button
+      className={` w-full p-1 text-xs rounded-lg uppercase ${color}`}
+      onClick={onClick}
+    >
       {title}
     </button>
   );

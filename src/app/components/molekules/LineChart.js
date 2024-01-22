@@ -10,7 +10,7 @@ import {
 
 const LineCharts = ({ data, pv, uv }) => {
   return (
-    <LineChart width={600} height={300} data={data}>
+    <LineChart id="#" width={600} height={300} data={data}>
       <XAxis dataKey="name" />
       <YAxis />
       <CartesianGrid strokeDasharray="3 3" />
